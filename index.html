@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STAFF WARS</title>
+<title>STAFF INVADERS</title>
 
 <style>
 :root{
@@ -268,7 +268,7 @@ select{
   <div id="stars"></div>
   <div id="setupScreen" class="screen active">
   <div class="card">
-    <h1>STAFF WARS</h1>
+    <h1>STAFF INVADERS</h1>
     <div class="subtitle">Identify the note before it reaches the clef.</div>
 <div id="highScorePanel" style="
   display:flex;
@@ -1606,7 +1606,7 @@ function gameOver() {
 
   if (state.score > highScore) {
     highScore = state.score;
-    localStorage.setItem("staffWarsHighScore", highScore);
+    localStorage.setItem("staffInvadersHighScore", highScore);
     updateHighScoreUI();
   }
 
@@ -1718,7 +1718,7 @@ window.addEventListener("keydown", (e) => {
 const lowSelect = document.getElementById("lowNote");
 const highSelect = document.getElementById("highNote");
 
-let highScore = Number(localStorage.getItem("staffWarsHighScore") || 0);
+let highScore = Number(localStorage.getItem("staffInvadersHighScore") || 0);
 
 function updateHighScoreUI(){
   document.getElementById("highScoreValue").textContent = highScore;
@@ -1835,7 +1835,7 @@ document.getElementById("playAgain").addEventListener("click", () => {
 
 document.getElementById("resetHighScore").addEventListener("click", () => {
   highScore = 0;
-  localStorage.setItem("staffWarsHighScore", 0);
+  localStorage.setItem("staffInvadersHighScore", 0);
   updateHighScoreUI();
 });
 
